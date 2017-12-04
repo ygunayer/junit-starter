@@ -29,6 +29,10 @@ dependencies {
     compile(group: 'junit', name: 'junit', version: junitVersion)
 }
 
+test {
+    finalizedBy jacocoTestReport
+}
+
 jacocoTestReport {
     reports {
         xml.enabled true
